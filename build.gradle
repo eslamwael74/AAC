@@ -32,6 +32,9 @@ ext {
     //3rd party
     picassoVersion = '2.5.2'
     daggerVersion = '2.13'
+    retrofitVersion = '2.3.0'
+    okhttp3Version = '3.6.0'
+    gsonConverterVersion = '2.3.0'
 
     //android
     supportLibraryVersion = '26.1.0'

@@ -1,4 +1,4 @@
-package com.eslamwael74.inq.aac.Data;
+package com.eslamwael74.inq.aac.Data.Model;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
@@ -17,8 +17,10 @@ public class Cooker {
     @NonNull
     @SerializedName("id")
     private int id;
+
     @SerializedName("user_name")
     private String name;
+
     @SerializedName("phone")
     private String phone;
 

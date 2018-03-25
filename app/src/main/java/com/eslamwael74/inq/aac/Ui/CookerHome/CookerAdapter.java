@@ -8,13 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.eslamwael74.inq.aac.Data.Cooker;
+import com.eslamwael74.inq.aac.Data.Model.Cooker;
 import com.eslamwael74.inq.aac.R;
+import com.eslamwael74.inq.aac.Ui.CookerDetails.DetailsActivity;
 
 import java.util.List;
 
 /**
- * Created by eslam on 3/21/2018.
+ * Created by eslamwael74 on 3/21/2018.
  */
 
 public class CookerAdapter extends RecyclerView.Adapter<CookerAdapter.MyViewHolder> {
@@ -36,6 +37,10 @@ public class CookerAdapter extends RecyclerView.Adapter<CookerAdapter.MyViewHold
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.tv.setText(cookers.get(position).getName());
+
+        holder.tv.setOnClickListener(view -> {
+            fragmentActivity.startActivity(DetailsActivity.newIntent(fragmentActivity,cookers.get(position).getId()));
+        });
     }
 
     @Override

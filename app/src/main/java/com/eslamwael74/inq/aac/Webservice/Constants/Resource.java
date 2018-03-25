@@ -1,15 +1,10 @@
-package com.eslamwael74.inq.aac.Webservice;
+package com.eslamwael74.inq.aac.Webservice.Constants;
 
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import static com.eslamwael74.inq.aac.Webservice.Status.ERROR;
-import static com.eslamwael74.inq.aac.Webservice.Status.LOADING;
-import static com.eslamwael74.inq.aac.Webservice.Status.SUCCESS;
-
 /**
- * Created by eslam on 3/21/2018.
+ * Created by eslamwael74 on 3/21/2018.
  */
 
 public class Resource<T> {
@@ -25,15 +20,15 @@ public class Resource<T> {
     }
 
     public static <T> Resource<T> success(@NonNull T data) {
-        return new Resource<>(SUCCESS, data, null);
+        return new Resource<>(Status.SUCCESS, data, null);
     }
 
     public static <T> Resource<T> error(String msg, @Nullable T data) {
-        return new Resource<>(ERROR, data, msg);
+        return new Resource<>(Status.ERROR, data, msg);
     }
 
     public static <T> Resource<T> loading(@Nullable T data) {
-        return new Resource<>(LOADING, data, null);
+        return new Resource<>(Status.LOADING, data, null);
     }
 
 }

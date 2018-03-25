@@ -1,6 +1,6 @@
-package com.eslamwael74.inq.aac.Webservice;
+package com.eslamwael74.inq.aac.Webservice.ModelResponse;
 
-import com.eslamwael74.inq.aac.Data.Cooker;
+import com.eslamwael74.inq.aac.Data.Model.Cooker;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -27,4 +27,5 @@ public class CookerResponse {
     public List<Cooker> getCookers() {
         return cookers;
     }
+
 }
