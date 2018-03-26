@@ -44,7 +44,6 @@ public abstract class BaseActivity extends AppCompatActivity implements HasSuppo
                                               Fragment fragment,
                                               int frameId,
                                               String tag) {
-
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(frameId, fragment, tag);
         transaction.commit();

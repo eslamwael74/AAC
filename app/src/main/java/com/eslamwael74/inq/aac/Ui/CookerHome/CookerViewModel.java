@@ -32,7 +32,6 @@ public class CookerViewModel extends ViewModel {
             }
             return cookerRepository.loadCookers(input.token,input.lat,input.lng);
         });
-//        cookerLiveData = cookerRepository.loadCookers(token);
     }
 
     public LiveData<Resource<List<Cooker>>> getCookerLiveData() {
@@ -41,7 +40,6 @@ public class CookerViewModel extends ViewModel {
 
 
     public void init(String token,String lat,String lng) {
-//        cookerLiveData = this.cookerRepository.loadCookers(token);
         UserData userData = new UserData(token, lat, lng);
         mutableLiveData.setValue(userData);
     }

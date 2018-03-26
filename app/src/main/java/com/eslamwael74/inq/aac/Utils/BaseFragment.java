@@ -46,11 +46,7 @@ public abstract class BaseFragment<VM extends ViewModel> extends Fragment implem
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         View view = inflater.inflate(getLayoutRes(),container,false);
-
-
-
         return view;
     }
 
